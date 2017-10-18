@@ -1,0 +1,35 @@
+
+<h1><center>Register Here For The College</h1>
+
+<%= form_tag do -%>
+<pre>First Name   : <%= text_field_tag 'Fname', nil, placeholder: 'Your First Name', maxlength: 15 -%> </pre>
+<pre>Last Name    : <%= text_field_tag 'Lname', nil, placeholder: 'Your Last Name', maxlength: 15 -%> </pre>
+<pre>Age          : <%= number_field_tag 'Age', nil, in: 14..100 -%> </pre>
+<pre>Gender       : <%= radio_button_tag 'gender', 'male' -%> male </pre>
+<pre> 	       <%= radio_button_tag 'gender', 'female' -%> female </pre>
+<pre>Email        : <%= email_field_tag 'email', 'email@gmail.com' -%> </pre>
+<pre>Phone Number : <%= telephone_field_tag 'tel', '9999999999' -%> </pre>
+<pre>Address      : <%= text_area_tag 'Address', nil, size: "50x3" -%> </pre>
+
+<pre>		<%= submit_tag "Save and Proceed" -%> </pre>
+<% end -%>
+<body>
+<div align="center" style="color: blue">
+	Check Your Details and Print
+<br/>
+	First Name is <%= @fn -%>
+<br/>
+	Last Name is <%= @ln -%>
+<br/>
+	Age is <%= @age -%>
+<br/>
+	You are <%= @gen -%>
+<br/>
+	Email is <%= @email -%>
+<br/>
+	Phone number is is <%= @phnumber -%>
+<br/>
+	Address is <%= @add -%>
+</div>
+
+</body>
